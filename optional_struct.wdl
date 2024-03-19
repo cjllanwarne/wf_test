@@ -1,15 +1,18 @@
 version 1.0
 
 struct FooStruct {
-  int x
+  Int x
 }
 
 workflow foo_workflow {
   input {
     FooStruct? myfoo
   } 
+  if (defined(myfoo)) {
+    Int output_x = myfoo.x
+  }
 
   output {
-    x = defined(myfoo) ? myfoo.x : 100
+    Int? output_x = output_x
   }
 }
