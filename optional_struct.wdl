@@ -10,6 +10,6 @@ workflow foo_workflow {
   } 
 
   output {
-    x = is_defined(myfoo) ? myfoo.x : 100
+    x = defined(myfoo) ? myfoo.x : 100
   }
 }
