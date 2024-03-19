@@ -9,7 +9,7 @@ workflow foo_workflow {
     FooStruct? myfoo
   } 
   if (defined(myfoo)) {
-    Int temp_x = myfoo.x
+    Int temp_x = select_first([myfoo.x])
   }
 
   output {
