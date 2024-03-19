@@ -9,10 +9,10 @@ workflow foo_workflow {
     FooStruct? myfoo
   } 
   if (defined(myfoo)) {
-    Int output_x = myfoo.x
+    Int temp_x = myfoo.x
   }
 
   output {
-    Int? output_x = output_x
+    Int? output_x = temp_x
   }
 }
