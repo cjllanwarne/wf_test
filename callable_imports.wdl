@@ -1,7 +1,7 @@
 version 1.0
 
-import "my_task.wdl"
-import "my_workflow.wdl" as mai_workflau
+import "https://raw.githubusercontent.com/cjllanwarne/private_wf_test/main/my_task.wdl"
+import "https://raw.githubusercontent.com/cjllanwarne/private_wf_test/main/my_workflow.wdl" as mai_workflau
 
 workflow callable_imports {
   call my_task.my_task {
